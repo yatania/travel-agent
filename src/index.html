@@ -1,13 +1,572 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" class="page">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Miami</title>
-    <link rel="stylesheet" href="./styles/main.scss">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel agent - Oksana Yaremchuk</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/style.scss" />
     <script src="scripts/main.js" defer></script>
   </head>
-  <body>
-    <h1>Landing Page</h1>
+
+  <body class="page__body">
+    <header class="header">
+      <div class="container">
+        <div class="header__content">
+          <a href="#menu" class="icon icon--menu"></a>
+          <nav class="header__nav nav">
+            <ul class="nav__list">
+              <a href="#" class="icon icon--close"></a>
+              <li>
+                <a class="nav__link" href="#about">About</a>
+              </li>
+              <li>
+                <a class="nav__link" href="#benefits">Benefits</a>
+              </li>
+              <li>
+                <a class="nav__link" href="#contacts">Contact</a>
+              </li>
+            </ul>
+            <a
+              href="https://www.viator.com/?pid=P00011640&uid=U00307091&mcid=58086&currency=USD"
+              target="_blank"
+              class="nav__book-trip button button--secondary"
+            >
+              BOOK A TRIP
+            </a>
+          </nav>
+          <h1 class="header__title">OKSANA YAREMCHUK</h1>
+          <h2
+            class="header__subtitle section-title section-title--align-center"
+          >
+            Travel business owner
+          </h2>
+          <section class="header__slider slider">
+            <img
+              src="./images/header/flag.png"
+              alt="Flag"
+              class="slider__item"
+            />
+            <img
+              src="./images/header/beach.png"
+              alt="Beach"
+              class="slider__item"
+            />
+            <img
+              src="./images/header/portrait-main.jpg"
+              alt="Photo of agent"
+              class="slider__item"
+            />
+            <img
+              src="./images/header/palms.png"
+              alt="Palms"
+              class="slider__item"
+            />
+            <img
+              src="./images/header/passport.png"
+              alt="Passportt"
+              class="slider__item"
+            />
+          </section>
+          <a href="#contacts" class="header__cta button">JOIN THE TEAM</a>
+        </div>
+      </div>
+    </header>
+
+    <aside class="menu page__menu" id="menu">
+      <nav class="nav menu__nav">
+        <ul class="nav__list">
+          <a href="#" class="icon icon--close"></a>
+          <li>
+            <a class="nav__link" href="#about">About</a>
+          </li>
+          <li>
+            <a class="nav__link" href="#benefits">Benefits</a>
+          </li>
+          <li>
+            <a class="nav__link" href="#contacts">Contact</a>
+          </li>
+        </ul>
+        <ul class="menu__socials socials">
+          <li class="socials__item">
+            <a
+              href="https://www.facebook.com/profile.php?id=100010495068593"
+              class="socials__link socials__link--instagram"
+              target="_blank"
+            >
+              <img
+                src="./images/icons/facebook.svg"
+                alt="Facebook"
+                class="socials__icon"
+              />
+            </a>
+          </li>
+          <li class="socials__item">
+            <a
+              href="https://www.instagram.com/oksana.yaremchuk"
+              class="socials__link socials__link--facebook"
+              target="_blank"
+            >
+              <img
+                src="./images/icons/instagram.svg"
+                alt="Instagram"
+                class="socials__icon"
+              />
+            </a>
+          </li>
+        </ul>
+        <a
+          href="https://www.viator.com/?pid=P00011640&uid=U00307091&mcid=58086&currency=USD"
+          target="_blank"
+          class="nav__book-trip button button--book-trip"
+        >
+          BOOK A TRIP
+        </a>
+      </nav>
+    </aside>
+
+    <main class="main">
+      <div class="main__content">
+        <section class="about" id="about">
+          <div class="container">
+            <h2 class="section-title scroll-animated scroll-animated--zoom-in">
+              About me
+            </h2>
+            <div class="about__content">
+              <img
+                src="./images/portrait-with-laptop.jpg"
+                alt="Woman with laptop"
+                class="about__photo scroll-animated scroll-animated--slide-in-right"
+              />
+              <div
+                class="about__description scroll-animated scroll-animated--slide-in-left"
+              >
+                <p>
+                  Hello! I’m Oksana, and I work in the travel business and with
+                  PlanNet Marketing. In the travel industry, I find immense job
+                  satisfaction in helping clients plan their ideal trips, enjoy
+                  the flexibility to work from anywhere, and benefit from income
+                  growth with every booking I make. With PlanNet Marketing, I
+                  create extra income by building a team and selling products,
+                  experience personal growth through enhanced leadership and
+                  business skills, and explore expanded opportunities thanks to
+                  the company's supportive resources.
+                </p>
+                <p>
+                  Do you have a passion for travel and dream of making money
+                  while exploring the world? Now is the perfect opportunity to
+                  transform your dreams into reality and turn your love for
+                  travel into a successful business!
+                </p>
+                <div class="about__links">
+                  <a
+                    href="https://www.viator.com/?pid=P00011640&uid=U00307091&mcid=58086&currency=USD"
+                    target="_blank"
+                    class="about__book-trip button button--secondary"
+                  >
+                    BOOK A TRIP
+                  </a>
+                  <a
+                    href="https://www.plannetmarketing.com/Default.aspx"
+                    target="_blank"
+                    class="about__learn-more button button--secondary"
+                  >
+                    ABOUT MARKETING
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="line">
+          <p class="line__content">
+            book your vocation/ start your own travel business/ no boss/ no
+            limit/
+          </p>
+          <p class="line__content">
+            book your vocation/ start your own travel business/ no boss/ no
+            limit/
+          </p>
+          <p class="line__content">
+            book your vocation/ start your own travel business/ no boss/ no
+            limit/
+          </p>
+        </section>
+        <section class="tourism">
+          <div class="container">
+            <h2
+              class="tourism__title section-title scroll-animated scroll-animated--zoom-in"
+            >
+              Embark on an Unforgettable Adventure!
+            </h2>
+            <div class="tourism__wrapper">
+              <div class="tourism__images">
+                <img
+                  src="./images/tourism/alaska.jpeg"
+                  alt="Alaska crouis"
+                  class="tourism__image scroll-animated scroll-animated--slide-in-left"
+                />
+                <img
+                  src="./images/tourism/greece.jpg"
+                  alt="Alaska crouis"
+                  class="tourism__image scroll-animated scroll-animated--slide-in-left"
+                />
+                <img
+                  src="./images/tourism/beach.jpg"
+                  alt="Alaska crouis"
+                  class="tourism__image scroll-animated scroll-animated--slide-in-left"
+                />
+                <img
+                  src="./images/tourism/capadokia.jpg"
+                  alt="Alaska crouis"
+                  class="tourism__image scroll-animated scroll-animated--slide-in-left"
+                />
+                <img
+                  src="./images/tourism/maldives.jpg"
+                  alt="Alaska crouis"
+                  class="tourism__image scroll-animated scroll-animated--slide-in-left"
+                />
+                <img
+                  src="./images/tourism/fields.jpg"
+                  alt="Alaska crouis"
+                  class="tourism__image scroll-animated scroll-animated--slide-in-left"
+                />
+                <img
+                  src="./images/tourism/city-near-the-beach.jpg"
+                  alt="Alaska crouis"
+                  class="tourism__image scroll-animated scroll-animated--slide-in-left"
+                />
+                <img
+                  src="./images/tourism/mountain-with-lake.png"
+                  alt="Alaska crouis"
+                  class="tourism__image scroll-animated scroll-animated--slide-in-left"
+                />
+                <img
+                  src="./images/tourism/boats.jpg"
+                  alt="Alaska crouis"
+                  class="tourism__image scroll-animated scroll-animated--slide-in-left"
+                />
+              </div>
+
+              <div
+                class="tourism__content scroll-animated scroll-animated--slide-in-right"
+              >
+                <p class="tourism__text">
+                  Book your trip with me and experience the journey of a
+                  lifetime! Whether you're dreaming of sun-drenched beaches or
+                  cruising through breathtaking landscapes, I am here to make
+                  your travel dreams a reality.
+                </p>
+                <p class="tourism__text">
+                  I believe travel should be an
+                  <span class="tourism__text--highlighted">adventure</span>, not
+                  a <span class="tourism__text--highlighted">chore</span>.
+                </p>
+                <p class="tourism__text">
+                  <span class="tourism__text--highlighted">
+                    Ready to start planning your dream adventure?
+                  </span>
+                  Contact me today to discuss your travel aspirations and let me
+                  help you create an unforgettable trip.
+                </p>
+
+                <div class="tourism__links">
+                  <a
+                    href="https://www.viator.com/?pid=P00011640&uid=U00307091&mcid=58086&currency=USD"
+                    target="_blank"
+                    class="nav__book-trip button button--secondary"
+                  >
+                    BOOK A TRIP
+                  </a>
+                  <a
+                    href="#contacts"
+                    class="nav__book-trip button button--secondary"
+                  >
+                    CONTACT ME
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="benefits" id="benefits">
+          <div class="container">
+            <div class="benefits__content">
+              <h2
+                class="section-title scroll-animated scroll-animated--zoom-in"
+              >
+                Benefits of Owning a Travel Business
+              </h2>
+              <div class="benefits__cards">
+                <div
+                  class="benefits__card scroll-animated scroll-animated--zoom-in"
+                >
+                  <h3 class="benefits__subtitle">WORK FROM HOME</h3>
+                  <div class="benefits__card-content">
+                    <img
+                      src="./images/benefits/work-from-home.jpg"
+                      alt="Person with computer"
+                      class="benefits__image"
+                    />
+                    <p class="benefits__text">
+                      Operating a travel business provides the opportunity to
+                      work from the comfort of your own home, offering both
+                      flexibility and convenience.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="benefits__card scroll-animated scroll-animated--zoom-in"
+                >
+                  <h3 class="benefits__subtitle">FLEXIBLE HOURS</h3>
+                  <div class="benefits__card-content">
+                    <img
+                      src="./images/benefits/flexible-hours.jpg"
+                      alt="Clock"
+                      class="benefits__image"
+                    />
+                    <p class="benefits__text">
+                      As a travel business owner, you can determine your own
+                      work schedule, enabling you to manage your time
+                      effectively and work according to your availability.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="benefits__card scroll-animated scroll-animated--zoom-in"
+                >
+                  <h3 class="benefits__subtitle">COST SAVINGS FOR CLIENTS</h3>
+                  <div class="benefits__card-content">
+                    <img
+                      src="./images/benefits/cost-savings-for-clients.jpg"
+                      alt="Piggy bank"
+                      class="benefits__image"
+                    />
+                    <p class="benefits__text">
+                      By assisting clients in finding the best travel deals and
+                      discounts, you not only save them money but also earn
+                      commissions on their bookings.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="benefits__card scroll-animated scroll-animated--zoom-in"
+                >
+                  <h3 class="benefits__subtitle">TRAVEL PERKS</h3>
+                  <div class="benefits__card-content">
+                    <img
+                      src="./images/benefits/travel-perks.jpg"
+                      alt="Travel bag"
+                      class="benefits__image"
+                    />
+                    <p class="benefits__text">
+                      Owning a travel business often comes with personal
+                      benefits, such as discounts on your own travel
+                      arrangements, allowing you to discover new destinations at
+                      a reduced price.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="benefits__card scroll-animated scroll-animated--zoom-in"
+                >
+                  <h3 class="benefits__subtitle">PURSUE YOUR PASSION</h3>
+                  <div class="benefits__card-content">
+                    <img
+                      src="./images/benefits/pursue-your-passion.jpg"
+                      alt="Person go to heart"
+                      class="benefits__image"
+                    />
+                    <p class="benefits__text">
+                      Launching a travel business can transform your love for
+                      travel into an exciting new hobby, all while generating an
+                      income.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="benefits__card scroll-animated scroll-animated--zoom-in"
+                >
+                  <h3 class="benefits__subtitle">NETWORKING OPPORTUNITIES</h3>
+                  <div class="benefits__card-content">
+                    <img
+                      src="./images/benefits/networking-opportunities.jpg"
+                      alt="Networking"
+                      class="benefits__image"
+                    />
+                    <p class="benefits__text">
+                      Running a travel business connects you with a diverse
+                      network of professionals in the travel industry, including
+                      suppliers, clients, and fellow entrepreneurs, creating
+                      valuable collaboration and growth opportunities.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <a
+                href="https://www2.inteletravel.com/advisor-benefits"
+                target="_blank"
+                class="benefits__link button button--secondary scroll-animated scroll-animated--zoom-in"
+              >
+                read more about benefits
+              </a>
+            </div>
+          </div>
+        </section>
+        <section class="contacts" id="contacts">
+          <div class="container">
+            <h2 class="section-title scroll-animated scroll-animated--zoom-in">
+              Ready to explore?
+              <br />
+              Or curious about joining us?
+              <br />
+              I am happy to answer your questions!
+            </h2>
+            <div class="contacts__content">
+              <form
+                id="contactForm"
+                class="contacts__form form"
+                action="#"
+                method="POST"
+              >
+                <h3
+                  class="form__subtitle scroll-animated scroll-animated--zoom-in"
+                >
+                  Fill out this form and I'll be in touch as soon as possible.
+                </h3>
+                <fieldset
+                  class="fieldset contacts__fieldset scroll-animated scroll-animated--slide-in-left"
+                >
+                  <input
+                    id="name"
+                    class="fieldset__field"
+                    type="text"
+                    name="name"
+                    placeholder="Name"
+                    maxlength="100"
+                    required
+                  />
+                  <input
+                    id="phone"
+                    class="fieldset__field"
+                    type="tel"
+                    name="phone"
+                    placeholder="Phone"
+                    maxlength="12"
+                    required
+                  />
+                  <input
+                    class="fieldset__field"
+                    id="email"
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                    maxlength="100"
+                    required
+                  />
+                  <button
+                    class="fieldset__button button"
+                    type="submit"
+                    id="formSubmit"
+                  >
+                    Send
+                  </button>
+                  <p id="response" class="form__response"></p>
+                </fieldset>
+              </form>
+              <img
+                src="./images/conference.jpg"
+                alt="Portrait from conference"
+                class="contacts__image scroll-animated scroll-animated--slide-in-right"
+              />
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__content">
+          <h2 class="footer__title section-title section-title--light">
+            Okasana Yaremchuk
+          </h2>
+          <h3 class="footer__text">
+            Ready to explore the world? Book your next trip today and join our
+            team and help others discover amazing adventures!
+          </h3>
+          <div class="footer__wrapper">
+            <ul class="footer__socials socials">
+              <li class="socials__item">
+                <a
+                  href="https://www.facebook.com/profile.php?id=100010495068593"
+                  class="socials__link"
+                  target="_blank"
+                >
+                  <img
+                    src="./images/icons/facebook.svg"
+                    alt="Facebook"
+                    class="socials__icon"
+                  />
+                </a>
+              </li>
+              <li class="socials__item">
+                <a
+                  href="https://www.instagram.com/oksana.yaremchuk"
+                  class="socials__link"
+                  target="_blank"
+                >
+                  <img
+                    src="./images/icons/instagram.svg"
+                    alt="Instagram"
+                    class="socials__icon"
+                  />
+                </a>
+              </li>
+            </ul>
+            <ul class="footer__contacts contact-info">
+              <li>
+                <a
+                  href="mailto:oksanayaremchuk98@gmail.com"
+                  class="contact-info__link"
+                >
+                  <img
+                    src="./images/icons/email.svg"
+                    alt="Email"
+                    class="contact-info__icon"
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="#contact" class="contact-info__link">
+                  <img
+                    src="./images/icons/phone.svg"
+                    alt="Phone"
+                    class="contact-info__icon"
+                  />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="rights">
+          <p class="rights__text">All rights reserved</p>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
   </body>
 </html>

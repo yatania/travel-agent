@@ -1,0 +1,82 @@
+.tourism {
+  padding-block: 2rem;
+
+  &__image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: $border-radius;
+    margin-block-end: 1rem;
+    object-fit: cover;
+    transition: transform $effectDuration;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  &__images {
+    columns: 10rem;
+
+    grid-column: 1 / -1;
+
+    @include onDesktop {
+      grid-column: 1 / 8;
+    }
+  }
+
+  &__wrapper {
+    @include pageGrid;
+    row-gap: 1rem;
+  }
+
+  &__content {
+    grid-column: 1 / -1;
+
+    @include onDesktop {
+      grid-column: 8 / 13;
+    }
+  }
+
+  &__text {
+    font-size: 1.25rem;
+    line-height: 1.6rem;
+    margin-block-end: 1rem;
+
+    &--highlighted {
+      font-size: 1.5rem;
+      line-height: 2rem;
+      color: $burgundy-color;
+      text-transform: uppercase;
+      font-style: italic;
+    }
+  }
+
+  &__links {
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: auto;
+    display: flex;
+  }
+}
+
+// .tourism__image.active {
+//   display: block;
+// }
+
+// .slider-controls {
+//   position: absolute;
+//   bottom: 1.5rem;
+//   left: 50%;
+//   transform: translateX(-50%);
+//   display: flex;
+//   gap: 10px;
+// }
+
+// .slider-control {
+//   background-color: rgba(0, 0, 0, 0.5);
+//   color: white;
+//   padding: 5px 10px;
+//   border-radius: 5px;
+//   cursor: pointer;
+// }

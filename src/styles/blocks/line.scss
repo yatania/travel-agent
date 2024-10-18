@@ -1,0 +1,22 @@
+.line {
+  background-color: #fff;
+  padding-block: 2rem;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+
+  @include onTablet {
+    padding-block: 3rem;
+  }
+
+  &__content {
+    font-size: 2.125rem;
+    line-height: 3rem;
+    display: inline-block;
+    animation: runningLine 15s linear infinite;
+
+    @include onTablet {
+      font-size: 3.125rem;
+    }
+  }
+}

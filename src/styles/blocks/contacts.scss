@@ -1,0 +1,83 @@
+.contacts {
+  padding-block: 2rem;
+
+  &__content {
+    @include pageGrid;
+    row-gap: 3rem;
+    align-items: center;
+  }
+
+  &__form {
+    grid-column: 1 / -1;
+
+    @include onTablet {
+      grid-column: 1 / 4;
+    }
+
+    @include onDesktop {
+      grid-column: 1 / 6;
+    }
+  }
+
+  &__image {
+    display: block;
+    border-radius: $border-radius;
+    width: 100%;
+    grid-column: 1 / -1;
+
+    @include onTablet {
+      grid-column: 4 / 7;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @include onDesktop {
+      grid-column: 7 / 13;
+    }
+  }
+
+  &__infoset {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 2rem;
+    text-align: left;
+    color: $main-text-color;
+
+    grid-column: 1 / -1;
+
+    @include onTablet {
+      grid-column: 4 / 7;
+    }
+
+    @include onDesktop {
+      grid-column: 8 / 11;
+    }
+  }
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: 0.35rem;
+    background-color: #fff;
+    border-radius: $border-radius;
+    transition: background-color $effectDuration;
+
+    &:hover {
+      background-color: $main-bg-color;
+    }
+
+    &:hover img {
+      fill: white;
+    }
+  }
+}

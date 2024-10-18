@@ -1,0 +1,39 @@
+.header {
+  background-color: $secondary-bg-color;
+
+  &__nav {
+    display: none;
+
+    @include onTablet {
+    }
+
+    @include onDesktop {
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      gap: 2rem;
+    }
+  }
+
+  &__content {
+    display: grid;
+  }
+
+  &__title {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 2.5rem;
+    margin-block: 1rem;
+  }
+
+  &__links {
+    margin: 0;
+    padding: 0;
+  }
+
+  &__cta {
+    place-self: center;
+    margin-block: 2rem;
+  }
+}

@@ -1,0 +1,31 @@
+.menu {
+  box-sizing: border-box;
+  height: 100vh;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: $secondary-bg-color;
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    padding-inline: $mobile-padding-inline;
+
+    @include onTablet {
+      padding-inline: $tablet-padding-inline;
+    }
+
+    @include onDesktop {
+      padding-inline: $desktop-padding-inline;
+    }
+
+    & > .button {
+      align-self: end;
+    }
+  }
+
+  &__socials {
+    align-self: end;
+  }
+}

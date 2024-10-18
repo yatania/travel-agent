@@ -1,0 +1,30 @@
+.button {
+  padding: 0.5rem 1.5rem;
+  background-color: $main-bg-color;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: $border-radius;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $secondary-text-color;
+  transition: all $effectDuration;
+
+  &:hover {
+    background-color: $secondary-bg-color;
+    border-color: $main-bg-color;
+    color: $main-bg-color;
+  }
+
+  &--secondary {
+    background-color: $secondary-bg-color;
+    border-color: $main-bg-color;
+    color: $beige-color;
+
+    &:hover {
+      background-color: $main-bg-color;
+      color: $secondary-text-color;
+      border-color: $secondary-text-color;
+    }
+  }
+}

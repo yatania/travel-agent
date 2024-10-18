@@ -1,0 +1,53 @@
+.benefits {
+  padding-block: 2rem;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(18.75rem, 1fr));
+    gap: 1.25rem;
+
+    @include onTablet {
+      grid-template-columns: repeat(auto-fill, minmax(24rem, 1fr));
+    }
+  }
+
+  &__card {
+    background-color: $secondary-bg-color;
+    border-radius: $border-radius;
+    padding: 1.25rem;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+  }
+
+  &__card-content {
+    display: grid;
+    grid-template-columns: subgrid;
+    gap: 1rem;
+
+    @include onTablet {
+      display: flex;
+    }
+  }
+
+  &__image {
+    display: block;
+    border-radius: $border-radius;
+    width: 8rem;
+    height: 8rem;
+  }
+
+  &__subtitle {
+    color: $beige-color;
+  }
+
+  &__link {
+    align-self: start;
+  }
+}

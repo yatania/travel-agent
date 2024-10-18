@@ -1,0 +1,15 @@
+.main {
+  background-color: $main-bg-color;
+  position: relative;
+  z-index: 1;
+
+  &__content {
+    display: grid;
+    padding-block: 2rem;
+
+    @include onTablet {
+      padding-block: 3.5rem;
+      row-gap: 7.5rem;
+    }
+  }
+}
