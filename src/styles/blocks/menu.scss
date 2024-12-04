@@ -23,6 +23,19 @@
     & > .button {
       align-self: end;
     }
+
+    & > .nav__list > li {
+      align-self: end;
+      text-align: right;
+    }
+
+    & > .language-dropdown {
+      align-self: end;
+    }
+
+    & > .nav__list {
+      padding-bottom: 0;
+    }
   }
 
   &__socials {

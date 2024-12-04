@@ -1,24 +1,19 @@
 $tablet-min-width: 36rem;
 $desktop-min-width: 64rem;
 $content-max-width: 63.75rem;
-
-$effectDuration: 0.3s;
+$effect-duration: 0.3s;
 $border-radius: 4px;
-
-$main-text-color: #333333;
-$secondary-text-color: #FFFFFF;
+$main-text-color: #333;
+$secondary-text-color: #FFF;
 $burgundy-color: #4c1d12;
 $burgundy-dark-color: rgb(51, 19, 10);
 $beige-color: rgba(151, 136, 121, 1);
-
-// $main-bg-color: rgba(151, 136, 121, 1);
+$beige-light-color: rgba(211, 196, 181, 1);
 $main-bg-color: rgba(191, 176, 161, 1);
-$secondary-bg-color: #FFFFFF;
-
+$secondary-bg-color: #FFF;
 $mobile-footer-height: 200px;
 $tablet-footer-height: 400px;
 $desktop-footer-height: 460px;
-
 $mobile-padding-inline: 1.25rem;
 $tablet-padding-inline: 4.5rem;
 $desktop-padding-inline: 7.5rem;

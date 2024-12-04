@@ -1,5 +1,5 @@
 .page {
-  font-family: "Poppins", sans-serif;
+  font-family: Poppins, sans-serif;
   color: $main-text-color;
   font-size: 1rem;
   line-height: 140%;
@@ -25,7 +25,7 @@
     left: 0;
     right: 0;
 
-    transition: all $effectDuration;
+    transition: all $effect-duration;
     opacity: 0;
     transform: translateX(-100%);
     pointer-events: none;

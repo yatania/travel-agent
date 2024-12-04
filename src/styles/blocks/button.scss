@@ -5,10 +5,11 @@
   cursor: pointer;
   border: 1px solid transparent;
   border-radius: $border-radius;
+  text-align: center;
   text-decoration: none;
   text-transform: uppercase;
   color: $secondary-text-color;
-  transition: all $effectDuration;
+  transition: all $effect-duration;
 
   &:hover {
     background-color: $secondary-bg-color;

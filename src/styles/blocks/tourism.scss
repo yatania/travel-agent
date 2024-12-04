@@ -8,30 +8,61 @@
     border-radius: $border-radius;
     margin-block-end: 1rem;
     object-fit: cover;
-    transition: transform $effectDuration;
 
-    &:hover {
-      transform: scale(1.05);
+    flex: 0 0 80%;
+    scroll-snap-align: start;
+    margin-right: 10px;
+
+    @include onTablet {
+      flex: none;
+      width: 100%;
+      margin-bottom: 15px;
+      break-inside: avoid;
     }
   }
 
-  &__images {
-    columns: 10rem;
+  &__images-container {
+    overflow: hidden;
+    position: relative;
+  }
 
-    grid-column: 1 / -1;
+  &__images {
+    display: flex;
+    gap: 15px;
+
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    scroll-snap-type: x mandatory;
+
+    @include onTablet {
+      display: block;
+      flex-wrap: wrap;
+      columns: 10rem;
+
+      grid-column: 1 / -1;
+    }
 
     @include onDesktop {
       grid-column: 1 / 8;
     }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 
   &__wrapper {
-    @include pageGrid;
-    row-gap: 1rem;
+    @include onTablet {
+      @include pageGrid;
+
+      row-gap: 1rem;
+    }
   }
 
   &__content {
-    grid-column: 1 / -1;
+    @include onTablet {
+      grid-column: 1 / -1;
+    }
 
     @include onDesktop {
       grid-column: 8 / 13;
@@ -59,24 +90,3 @@
     display: flex;
   }
 }
-
-// .tourism__image.active {
-//   display: block;
-// }
-
-// .slider-controls {
-//   position: absolute;
-//   bottom: 1.5rem;
-//   left: 50%;
-//   transform: translateX(-50%);
-//   display: flex;
-//   gap: 10px;
-// }
-
-// .slider-control {
-//   background-color: rgba(0, 0, 0, 0.5);
-//   color: white;
-//   padding: 5px 10px;
-//   border-radius: 5px;
-//   cursor: pointer;
-// }

@@ -39,7 +39,7 @@
     outline: none;
     border: 1px solid transparent;
     color: $main-text-color;
-    transition: border-color $effectDuration;
+    transition: border-color $effect-duration;
 
     &::placeholder {
       opacity: 0.5;

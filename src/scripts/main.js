@@ -3,6 +3,7 @@
 document.addEventListener('DOMContentLoaded', function() {
   const animatedBlocks = document.querySelectorAll('.scroll-animated');
 
+  // eslint-disable-next-line no-undef
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -23,6 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Initialize EmailJS
 (function() {
+  // eslint-disable-next-line no-undef
   emailjs.init('S3W8-r6Y4OYu5e_ur');
 })();
 
@@ -44,16 +46,16 @@ form.addEventListener('submit', function(event) {
   };
 
   if ((name, email, phone)) {
+    // eslint-disable-next-line no-undef
     emailjs.send('service_gwgn85o', 'template_s02jv1d', templateParams).then(
       function(response) {
         submitButton.textContent = 'DONE!';
 
         document.getElementById('contactForm').reset();
       },
-      function(error) {
+      function() {
         document.getElementById('response').innerHTML
           = 'Failed to send message. Please try again.';
-        console.error('Error sending email: ', error);
       },
     );
   }

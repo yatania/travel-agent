@@ -3,6 +3,7 @@
 
   &__content {
     @include pageGrid;
+
     row-gap: 3rem;
     align-items: center;
   }
@@ -70,7 +71,7 @@
     padding: 0.35rem;
     background-color: #fff;
     border-radius: $border-radius;
-    transition: background-color $effectDuration;
+    transition: background-color $effect-duration;
 
     &:hover {
       background-color: $main-bg-color;
