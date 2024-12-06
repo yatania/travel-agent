@@ -254,7 +254,7 @@
                   </a>
                   <a
                     data-key="about_marketing"
-                    href="https://www.plannetmarketing.com/Default.aspx"
+                    href="https://www.plannetmarketing.com/Yaremchuk"
                     target="_blank"
                     class="about__learn-more button button--secondary"
                   >
@@ -565,18 +565,27 @@
                     maxlength="100"
                     required
                   />
-                  <input
-                    data-key="form_phone"
-                    id="phone"
-                    class="fieldset__field"
-                    type="tel"
-                    name="phone"
-                    placeholder="Phone"
-                    pattern="\d*"
-                    inputmode="numeric"
-                    maxlength="12"
-                    required
-                  />
+                  <div class="fieldset__field-wrapper">
+                    <input
+                      data-key="form_phone"
+                      id="phone"
+                      class="fieldset__field"
+                      type="tel"
+                      name="phone"
+                      placeholder="Phone"
+                      pattern="\d*"
+                      inputmode="numeric"
+                      maxlength="12"
+                      required
+                    />
+                    <div
+                      id="phoneErrorTooltip"
+                      class="error-tooltip"
+                      data-key="error_phone"
+                    >
+                      Please enter a valid phone number.
+                    </div>
+                  </div>
                   <input
                     data-key="form_email"
                     class="fieldset__field"
@@ -662,7 +671,7 @@
                 </a>
               </li>
               <li>
-                <a href="#contact" class="contact-info__link">
+                <a href="callto:+12245006564" class="contact-info__link">
                   <img
                     src="./images/icons/phone.svg"
                     alt="Phone"

@@ -4,9 +4,6 @@
   &__nav {
     display: none;
 
-    @include onTablet {
-    }
-
     @include onDesktop {
       display: flex;
       justify-content: end;

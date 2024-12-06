@@ -22,9 +22,8 @@
       display: none;
     }
     &:nth-of-type(3) {
-      height: 421px;
-      width: fit-content;
-      object-fit: contain;
+      height: 471px;
+      object-position: top;
     }
   }
 }
@@ -42,6 +41,7 @@
   .slider__item:nth-of-type(3) {
     object-fit: cover;
     width: 100%;
+    height: 421px;
     grid-column: 3 / 6;
   }
   .slider__item:nth-of-type(2) {

@@ -79,6 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
       footer_subtitle: `Ready to explore the world? Book your next trip today
        and join our team and help others discover amazing adventures!`,
       footer_rights: 'All rights reserved',
+      error_phone: 'Please enter a valid phone number.',
     },
     uk: {
       header_title: 'Оксана Яремчук',
@@ -155,6 +156,7 @@ document.addEventListener('DOMContentLoaded', () => {
         подорож вже сьогодні та приєднуйтеся до нашої команди, щоб допомагати
         іншим відкривати захопливі пригоди!`,
       footer_rights: 'Всі права захищені',
+      error_phone: 'Будь ласка, введіть дійсний номер телефону.',
     },
   };
 

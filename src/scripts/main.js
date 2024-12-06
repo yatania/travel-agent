@@ -60,3 +60,39 @@ form.addEventListener('submit', function(event) {
     );
   }
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const phoneInput = document.getElementById('phone');
+  const phoneErrorTooltip = document.getElementById('phoneErrorTooltip');
+
+  function validatePhone() {
+    const phoneValue = phoneInput.value.trim();
+    const phonePattern = /^[0-9]*$/;
+
+    if (!phonePattern.test(phoneValue)) {
+      phoneErrorTooltip.style.display = 'block';
+      phoneInput.classList.add('fieldset__field--error');
+
+      return false;
+    } else {
+      phoneErrorTooltip.style.display = 'none';
+      phoneInput.classList.remove('fieldset__field--error');
+
+      return true;
+    }
+  }
+
+  phoneInput.addEventListener('blur', validatePhone);
+
+  form.addEventListener('submit', (event) => {
+    if (!validatePhone()) {
+      event.preventDefault();
+    }
+  });
+
+  phoneInput.addEventListener('input', () => {
+    if (phoneErrorTooltip.style.display === 'block') {
+      validatePhone();
+    }
+  });
+});

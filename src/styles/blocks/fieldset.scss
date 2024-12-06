@@ -40,6 +40,7 @@
     border: 1px solid transparent;
     color: $main-text-color;
     transition: border-color $effect-duration;
+    width: 100%;
 
     &::placeholder {
       opacity: 0.5;
@@ -47,6 +48,18 @@
 
     &:hover {
       border-color: $burgundy-color;
+    }
+
+    &-wrapper {
+      position: relative;
+    }
+
+    &--error {
+      border-color: $red-color;
+
+      &:hover {
+        border-color: $red-color;
+      }
     }
   }
 
@@ -59,3 +72,19 @@
     }
   }
 }
+
+.error-tooltip {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: $red-color;
+  color: $secondary-text-color;
+  padding: 4px 8px;
+  font-size: 0.75rem;
+  border-radius: 0.25rem;
+  margin-top: 5px;
+  white-space: nowrap;
+  z-index: 100;
+}
+
