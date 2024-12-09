@@ -1,7 +1,11 @@
 'use strict';
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', () => {
   const animatedBlocks = document.querySelectorAll('.scroll-animated');
+  const phoneInput = document.getElementById('phone');
+  const phoneErrorTooltip = document.getElementById('phoneErrorTooltip');
+  const form = document.getElementById('contactForm');
+  const submitButton = document.getElementById('formSubmit');
 
   // eslint-disable-next-line no-undef
   const observer = new IntersectionObserver(
@@ -12,87 +16,68 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       });
     },
-    {
-      threshold: 0.1,
-    },
+    { threshold: 0.1 },
   );
 
-  animatedBlocks.forEach((animatedBlock) => {
-    observer.observe(animatedBlock);
-  });
-});
+  animatedBlocks.forEach((block) => observer.observe(block));
 
-// Initialize EmailJS
-(function() {
   // eslint-disable-next-line no-undef
-  emailjs.init('S3W8-r6Y4OYu5e_ur');
-})();
+  emailjs.init('IwFC2en5CgdtAoWUG');
 
-const form = document.getElementById('contactForm');
-const submitButton = document.getElementById('formSubmit');
-
-form.addEventListener('submit', function(event) {
-  event.preventDefault();
-
-  const name = document.getElementById('name').value;
-  const email = document.getElementById('email').value;
-  const phone = document.getElementById('phone').value;
-
-  const templateParams = {
-    subject: `Message from ${name}.`,
-    name: name,
-    phone: phone,
-    email: email,
-  };
-
-  if ((name, email, phone)) {
-    // eslint-disable-next-line no-undef
-    emailjs.send('service_gwgn85o', 'template_s02jv1d', templateParams).then(
-      function(response) {
-        submitButton.textContent = 'DONE!';
-
-        document.getElementById('contactForm').reset();
-      },
-      function() {
-        document.getElementById('response').innerHTML
-          = 'Failed to send message. Please try again.';
-      },
-    );
-  }
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-  const phoneInput = document.getElementById('phone');
-  const phoneErrorTooltip = document.getElementById('phoneErrorTooltip');
-
-  function validatePhone() {
+  const validatePhone = () => {
     const phoneValue = phoneInput.value.trim();
     const phonePattern = /^[0-9]*$/;
 
-    if (!phonePattern.test(phoneValue)) {
-      phoneErrorTooltip.style.display = 'block';
-      phoneInput.classList.add('fieldset__field--error');
+    const isValid = phonePattern.test(phoneValue);
 
-      return false;
-    } else {
-      phoneErrorTooltip.style.display = 'none';
-      phoneInput.classList.remove('fieldset__field--error');
+    phoneErrorTooltip.style.display = isValid ? 'none' : 'block';
+    phoneInput.classList.toggle('fieldset__field--error', !isValid);
 
-      return true;
-    }
-  }
+    return isValid;
+  };
+
+  const debounce = (func, delay) => {
+    let timeout;
+
+    return (...args) => {
+      clearTimeout(timeout);
+      timeout = setTimeout(() => func(...args), delay);
+    };
+  };
 
   phoneInput.addEventListener('blur', validatePhone);
+  phoneInput.addEventListener('input', debounce(validatePhone, 300));
 
   form.addEventListener('submit', (event) => {
-    if (!validatePhone()) {
-      event.preventDefault();
-    }
-  });
+    event.preventDefault();
 
-  phoneInput.addEventListener('input', () => {
-    if (phoneErrorTooltip.style.display === 'block') {
-      validatePhone();
+    if (!validatePhone()) {
+      return;
+    };
+
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const phone = phoneInput.value.trim();
+
+    if (name && email && phone) {
+      const templateParams = {
+        subject: `Message from ${name}.`,
+        name,
+        phone,
+        email,
+      };
+
+      // eslint-disable-next-line no-undef
+      emailjs.send('service_gncxp3g', 'template_getwrav', templateParams).then(
+        () => {
+          submitButton.textContent = 'DONE!';
+          form.reset();
+        },
+        () => {
+          document.getElementById('response').textContent
+            = 'Failed to send message. Please try again.';
+        },
+      );
     }
   });
 });

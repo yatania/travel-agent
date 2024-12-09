@@ -80,6 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
        and join our team and help others discover amazing adventures!`,
       footer_rights: 'All rights reserved',
       error_phone: 'Please enter a valid phone number.',
+      head_title: 'Oksana Yaremchuk - Travel agent - Online business',
     },
     uk: {
       header_title: 'Оксана Яремчук',
@@ -157,6 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
         іншим відкривати захопливі пригоди!`,
       footer_rights: 'Всі права захищені',
       error_phone: 'Будь ласка, введіть дійсний номер телефону.',
+      head_title: 'Оксана Яремчук - Тревел-агент - Онлайн-бізнес',
     },
   };
 
