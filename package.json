@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Frontend boilerplate based on gulp",
   "engines": {
-    "node": ">=16.x"
+    "node": ">=16.0.0 <18.0.0"
   },
   "scripts": {
     "init": "mate-scripts init",
@@ -28,6 +28,7 @@
     "@parcel/transformer-sass": "^2.12.0",
     "eslint": "^8.57.0",
     "eslint-plugin-node": "^11.1.0",
+    "mate-scripts": "^0.0.1",
     "parcel": "^2.12.0",
     "prettier": "^3.3.2",
     "stylelint": "^16.7.0",
